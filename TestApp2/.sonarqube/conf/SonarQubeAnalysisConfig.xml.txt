@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SonarQubeSettings>
+    <!-- Specify the SonarQube server URL -->
+    <ServerUrl>http://localhost:9000</ServerUrl>
+    <!-- Specify the authentication token -->
+    <AuthToken></AuthToken>
+  </SonarQubeSettings>
+  <Rules />
+  <AnalyzersSettings />
+</AnalysisConfig>
