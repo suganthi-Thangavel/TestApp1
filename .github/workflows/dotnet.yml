@@ -19,18 +19,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - name: Create SonarQubeAnalysisConfig.xml
-        run: |
-          echo '<?xml version="1.0"?>' > SonarQubeAnalysisConfig.xml
-          echo '<AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">' >> SonarQubeAnalysisConfig.xml
-          echo '  <SonarQubeSettings>' >> SonarQubeAnalysisConfig.xml
-          echo '    <ServerUrl>http://localhost:9000</ServerUrl>' >> SonarQubeAnalysisConfig.xml
-          echo "    <AuthToken>${{ secrets.SONAR_TOKEN }}</AuthToken>" >> SonarQubeAnalysisConfig.xml
-          echo '  </SonarQubeSettings>' >> SonarQubeAnalysisConfig.xml
-          echo '  <Rules />' >> SonarQubeAnalysisConfig.xml
-          echo '  <AnalyzersSettings />' >> SonarQubeAnalysisConfig.xml
-          echo '</AnalysisConfig>' >> SonarQubeAnalysisConfig.xml
-          
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
